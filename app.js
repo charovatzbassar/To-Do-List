@@ -8,6 +8,16 @@ const createTodo = (text) => {
   const todoBody = document.createElement("p");
   todoBody.classList.add("todoBody");
 
+  const { checkButton, deleteButton } = generateButtons(todo);
+
+  todoBody.textContent = text;
+  todoBody.appendChild(checkButton);
+  todoBody.appendChild(deleteButton);
+  todo.appendChild(todoBody);
+  return todo;
+};
+
+const generateButtons = (todo) => {
   const checkButton = document.createElement("button");
   checkButton.classList.add("checkButton");
   checkButton.textContent = "Check";
@@ -23,12 +33,7 @@ const createTodo = (text) => {
     const todoToRemove = e.target.parentElement.parentElement;
     todoToRemove.remove();
   });
-
-  todoBody.textContent = text;
-  todoBody.appendChild(checkButton);
-  todoBody.appendChild(deleteButton);
-  todo.appendChild(todoBody);
-  return todo;
+  return { checkButton, deleteButton };
 };
 
 createButton.addEventListener("click", () => {
