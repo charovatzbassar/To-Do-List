@@ -1,3 +1,87 @@
 .checked {
     text-decoration: line-through;
 }
+
+body {
+    background-color: #8ecae6;
+}
+
+#title {
+    background-color: #023047;
+    color: white;
+
+}
+
+#title h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+#createButton,
+#deleteChecked {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #fb8500;
+    border: 2px solid white;
+    border-radius: 1em;
+    padding: 10px;
+    margin: 5px;
+    transition: 0.25s;
+}
+
+#createButton:hover,
+#deleteChecked:hover {
+    background-color: #ffb703;
+}
+
+.checkButton,
+.deleteButton {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border: 2px solid white;
+    border-radius: 1em;
+    padding: 6px;
+    margin: 8px;
+    transition: 0.25s;
+    width: 180px;
+}
+
+.deleteButton {
+    background-color: #d00000;
+}
+
+.deleteButton:hover {
+    background-color: #ef3e36;
+}
+
+.checkButton {
+    background-color: #008000;
+}
+
+.checkButton:hover {
+    background-color: #38b000;
+}
+
+#todos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.todo {
+    display: flex;
+    flex-flow: column;
+    margin: 20px;
+}
+
+.todoBody {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    color: white;
+    background-color: #ffb703;
+    border: 2px solid white;
+    word-wrap: break-word;
+}
