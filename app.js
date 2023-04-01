@@ -16,7 +16,7 @@ const createTodo = (text) => {
   deleteButton.textContent = "Delete";
 
   checkButton.addEventListener("click", () => {
-    todo.classList.add("checked");
+    todo.classList.toggle("checked");
   });
 
   deleteButton.addEventListener("click", function (e) {
