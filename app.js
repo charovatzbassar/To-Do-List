@@ -1,6 +1,7 @@
 const todoList = document.querySelector("#todos");
 const createButton = document.querySelector("#createButton");
 const deleteCheckedButton = document.querySelector("#deleteChecked");
+const placeholder = document.querySelector("#placeholder");
 
 const createTodo = (text) => {
   const todo = document.createElement("div");
@@ -41,6 +42,7 @@ createButton.addEventListener("click", () => {
   let text = prompt("Enter a to-do");
   if (text) {
     todoList.appendChild(createTodo(text));
+    placeholder.classList.add("hidden");
   }
 });
 

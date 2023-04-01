@@ -1,5 +1,10 @@
 .checked {
     text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.hidden {
+    display: none;
 }
 
 body {
@@ -76,7 +81,7 @@ body {
 .todoBody {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 500;
     width: 200px;
     height: 200px;
     padding: 10px;
@@ -84,4 +89,12 @@ body {
     background-color: #ffb703;
     border: 2px solid white;
     word-wrap: break-word;
+    transition: 1s;
+}
+
+#placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    color: white;
 }
