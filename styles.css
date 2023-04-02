@@ -7,9 +7,15 @@
     display: none;
 }
 
+.todoTime {
+    text-align: center;
+}
+
 body {
     background-color: #8ecae6;
 }
+
+
 
 #title {
     background-color: #023047;
@@ -76,6 +82,10 @@ body {
     display: flex;
     flex-flow: column;
     margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-style: italic;
+    font-weight: 500;
 }
 
 .todoBody {
@@ -97,4 +107,23 @@ body {
     font-style: italic;
     font-weight: 500;
     color: white;
+}
+
+@media(max-width: 405px) {
+    #title h1 {
+        text-align: center;
+    }
+
+    #buttons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 230px) {
+    .todo {
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
 }

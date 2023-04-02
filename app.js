@@ -11,8 +11,20 @@ const createTodo = (text) => {
 
   const { checkButton, deleteButton } = generateButtons(todoBody);
 
-  todoBody.textContent = text;
+  const date = new Date();
 
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  let currentTime = date.getHours() + ":" + date.getMinutes();
+
+  let currentDate = `${day}-${month}-${year} ${currentTime}`;
+  const time = document.createElement("time");
+  time.textContent = currentDate;
+  time.classList.add("todoTime");
+
+  todoBody.textContent = text;
+  todo.appendChild(time);
   todo.appendChild(todoBody);
   todo.appendChild(checkButton);
   todo.appendChild(deleteButton);
@@ -34,6 +46,9 @@ const generateButtons = (todoBody) => {
   deleteButton.addEventListener("click", function (e) {
     const todoToRemove = e.target.parentElement;
     todoToRemove.remove();
+    if (todoList.children.length === 1) {
+      placeholder.classList.remove("hidden");
+    }
   });
   return { checkButton, deleteButton };
 };
@@ -50,5 +65,8 @@ deleteCheckedButton.addEventListener("click", () => {
   const checkedTodos = document.querySelectorAll(".checked");
   for (let todo of checkedTodos) {
     todo.parentElement.remove();
+  }
+  if (todoList.children.length === 1) {
+    placeholder.classList.remove("hidden");
   }
 });
